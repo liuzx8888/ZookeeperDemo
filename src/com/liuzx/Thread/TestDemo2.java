@@ -9,7 +9,7 @@ public class TestDemo2 {
 		SynchronizedDemo.lastnum = 500;
 
 		for (int i = 100; i > 0; i--) {
-			SynchronizedDemo demo = new SynchronizedDemo((int) (Math.random() * 5));
+			SynchronizedDemo demo = new SynchronizedDemo((int) (Math.random() * 10));
 	        
 			Thread thread1 = new Thread(demo, "´°¿Ú1");
 			thread1.start();
