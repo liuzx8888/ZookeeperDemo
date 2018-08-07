@@ -10,7 +10,7 @@ public class TicketMangerment implements Runnable {
 		this.salenum = salenum;
 	}
 
-	public int saleticket() {
+	public synchronized int saleticket() {
 		
 			return lastnum - salenum;
 	
