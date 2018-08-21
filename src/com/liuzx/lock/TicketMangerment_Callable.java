@@ -4,18 +4,18 @@ import java.util.concurrent.Callable;
 
 public class TicketMangerment_Callable implements Callable<Integer> {
 
-	public  int lastnum;
-	public  int salenum;
+	private int lastnum;
+	private int salenum;
 
-	public TicketMangerment_Callable(int lastnum,int salenum) {
+	public TicketMangerment_Callable(int lastnum, int salenum) {
 		// TODO Auto-generated constructor stub
 		this.lastnum = lastnum;
 		this.salenum = salenum;
 	}
 
-	public int saleticket() {
+	private int saleticket() {
 
-		 return lastnum - salenum;
+		return lastnum - salenum;
 
 	}
 
