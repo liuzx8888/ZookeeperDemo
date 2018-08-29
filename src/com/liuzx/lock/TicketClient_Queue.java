@@ -23,8 +23,8 @@ public class TicketClient_Queue {
 			e.printStackTrace();
 		}
 
-		for (int i = 0; i < 50; i++) {
-			int ticknum = (int) ((Math.random()) * 5) + 1;
+		for (int i = 0; i < 100; i++) {
+			int ticknum = (int) ((Math.random()) * 10) + 1;
 			try {
 				lastnum1 = queue.take();
 				if (lastnum1 == 0) {
