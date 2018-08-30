@@ -5,7 +5,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import org.apache.zookeeper.common.StringUtils;
 
 public class TestPerson {
 	public static void main(String[] args)
@@ -16,11 +15,14 @@ public class TestPerson {
 		Constructor<?>[] Cons = null;
 		Method M1 = null;
 
+		@SuppressWarnings("unchecked")
 		Class<Person> C1 = (Class<Person>) Class.forName("com.liuzx.reflect.Person");
-		/*
-		 * Method[] Methods = C1.getMethods(); for (int i = 0; i < Methods.length; i++)
-		 * { System.out.println(Methods[i]); }
-		 */
+
+		Method[] Methods = C1.getMethods();
+		for (int i = 0; i < Methods.length; i++) {
+			System.out.println(Methods[i]);
+		}
+
 		Field[] Fields = C1.getDeclaredFields();
 		for (int i = 0; i < Fields.length; i++) {
 			System.out.println(Fields[i]);
@@ -37,6 +39,7 @@ public class TestPerson {
 			System.out.println(person2);
 			M1 = C1.getMethod("print");
 			M1.invoke(person2);
+
 		} catch (SecurityException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
