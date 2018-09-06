@@ -15,14 +15,14 @@ public class Mingxing implements PersonInter {
 	@Override
 	public String sing(String name, String song) {
 		// TODO Auto-generated method stub
-		return "Ã÷ÐÇ:" + name + "³ª:" + song;
+		return "Ã÷ÐÇ:" + name + "  ³ª:" + song;
 
 	}
 
 	@Override
 	public String dance(String name, String dance) {
 		// TODO Auto-generated method stub
-		return "Ã÷ÐÇ:" + name + "Ìø:" + dance;
+		return "Ã÷ÐÇ:" + name + "  Ìø:" + dance;
 
 	}
 

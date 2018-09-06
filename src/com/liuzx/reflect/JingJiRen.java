@@ -23,10 +23,12 @@ public class JingJiRen {
 							Thread.sleep(3000);
 							System.out.println("收到" + money);							
 							return method.invoke(mx, args);
+							
 						}
 						
 						
 						if (method.getName().equals("dance")) {
+							Thread.sleep(3000);
 							System.out.println("我是" + name + "经纪人,跳舞请付款" + money);
 							Thread.sleep(2000);
 							System.out.println("收到" + money);	
